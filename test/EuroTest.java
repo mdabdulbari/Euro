@@ -37,4 +37,12 @@ public class EuroTest {
         Euro euro10 = new Euro(10);
         assertNotEquals(euro10, new Object());
     }
+
+    @Test
+    public void expect10EurosToBeEqualTo7EurosPlus3Euros() {
+        Euro euro10 = new Euro(10);
+        Euro euro7 = new Euro(7);
+        Euro euro3 = new Euro(3);
+        assertEquals(euro10, euro7.add(euro3));
+    }
 }
