@@ -45,4 +45,12 @@ public class EuroTest {
         Euro euro3 = new Euro(3);
         assertEquals(euro10, euro7.add(euro3));
     }
+
+    @Test
+    public void expect10EurosToNotBeEqualTo5EurosPlus2Euros() {
+        Euro euro10 = new Euro(10);
+        Euro euro5 = new Euro(5);
+        Euro euro2 = new Euro(2);
+        assertNotEquals(euro10, euro5.add(euro2));
+    }
 }
